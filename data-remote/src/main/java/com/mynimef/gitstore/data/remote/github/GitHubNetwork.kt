@@ -15,6 +15,15 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.Base64
 
+/**
+ * Network client for interacting with the GitHub API.
+ * Handles authentication, repository search, and app information retrieval.
+ *
+ * This class provides methods to:
+ * - Authenticate users with GitHub using Personal Access Tokens
+ * - Search for repositories containing GitStore app configurations
+ * - Retrieve app information from repository files
+ */
 internal class GitHubNetwork {
 
     private val retrofit = Retrofit.Builder()
@@ -24,6 +33,12 @@ internal class GitHubNetwork {
 
     private val api = retrofit.create(GithubApi::class.java)
 
+    /**
+     * Authenticates a user with GitHub using a Personal Access Token.
+     *
+     * @param token The GitHub Personal Access Token for authentication
+     * @return [ApiResult] containing [IntegrationInfo] on success, or error information on failure
+     */
     suspend fun logIn(
         token: String,
     ): ApiResult<IntegrationInfo> = convertApiResult(
@@ -41,6 +56,13 @@ internal class GitHubNetwork {
         ))
     }
 
+    /**
+     * Searches for repositories containing GitStore app configurations.
+     *
+     * @param token The GitHub Personal Access Token for authentication
+     * @param query The search query to find repositories
+     * @return [ApiResult] containing a list of [IAppInfo] on success, or error information on failure
+     */
     suspend fun searchRepository(
         token: String,
         query: String
@@ -73,6 +95,13 @@ internal class GitHubNetwork {
         })
     }
 
+    /**
+     * Retrieves app information from a specific repository.
+     *
+     * @param owner The repository owner's username
+     * @param repo The repository name
+     * @return [ApiResult] containing [IAppInfo] on success, or error information on failure
+     */
     suspend fun getDescription(
         owner: String,
         repo: String

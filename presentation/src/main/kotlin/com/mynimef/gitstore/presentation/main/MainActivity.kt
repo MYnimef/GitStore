@@ -13,6 +13,15 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * Main activity of the GitStore application.
+ * Handles deep links and serves as the entry point for the app's UI.
+ *
+ * This activity is responsible for:
+ * - Managing deep link navigation
+ * - Setting up the main UI using Jetpack Compose
+ * - Initializing the app's theme
+ */
 @AndroidEntryPoint
 internal class MainActivity : ComponentActivity() {
 
