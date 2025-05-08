@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "GitStore"
 include(":app")
 include(":domain")
+include(":data-remote")
+include(":data-local")
+include(":presentation")
