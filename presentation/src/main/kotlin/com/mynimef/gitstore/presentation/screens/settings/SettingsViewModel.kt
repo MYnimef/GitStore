@@ -18,7 +18,7 @@ internal class SettingsViewModel @Inject constructor(
         when (action) {
             SettingsAction.OnIntegrationsClick -> {
                 viewModelScope.launch {
-                    eventListener.onEvent(Event.NavigateTo(navigation = Navigation.INTEGRATIONS))
+                    eventListener.onEvent(Event.NavigateTo(navigation = Navigation.Integrations))
                 }
             }
         }

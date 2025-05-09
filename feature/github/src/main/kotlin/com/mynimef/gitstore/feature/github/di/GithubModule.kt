@@ -3,7 +3,8 @@ package com.mynimef.gitstore.feature.github.di
 import com.mynimef.gitstore.domain.EventListener
 import com.mynimef.gitstore.domain.IntegrationAuthHandler
 import com.mynimef.gitstore.domain.models.Integration
-import com.mynimef.gitstore.feature.github.authhandlers.GithubOauthHandler
+import com.mynimef.gitstore.feature.github.authhandlers.GitHubOAuthHandler
+import com.mynimef.gitstore.feature.github.authhandlers.GitHubPatHandler
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +20,7 @@ internal class GithubModule {
     fun provideGitHubOauthHandler(
         eventListener: EventListener
     ): Pair<Integration, IntegrationAuthHandler> {
-        return Integration(source = Integration.Source.GITHUB, auth = Integration.Auth.OAUTH) to GithubOauthHandler(eventListener = eventListener)
+        return Integration(source = Integration.Source.GITHUB, auth = Integration.Auth.OAUTH) to GitHubOAuthHandler(eventListener = eventListener)
     }
 
     @Provides
@@ -27,11 +28,7 @@ internal class GithubModule {
     fun provideGitHubPATHandler(
         eventListener: EventListener
     ): Pair<Integration, IntegrationAuthHandler> {
-        return Integration(source = Integration.Source.GITHUB, auth = Integration.Auth.PAT) to object :
-            IntegrationAuthHandler {
-            override suspend fun handleAuth() {
-            }
-        }
+        return Integration(source = Integration.Source.GITHUB, auth = Integration.Auth.PAT) to GitHubPatHandler()
     }
 
 }

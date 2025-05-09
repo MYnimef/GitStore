@@ -19,10 +19,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.mynimef.gitstore.domain.models.Event
 import com.mynimef.gitstore.domain.models.Navigation
 import com.mynimef.gitstore.presentation.screens.appdetails.AppDetailsScreen
@@ -69,9 +71,9 @@ internal fun MainScreen() {
             val navBackStackEntry = navController.currentBackStackEntryAsState()
             val isVisible by remember { derivedStateOf {
                 when (navBackStackEntry.value?.destination?.route) {
-                    Navigation.FEATURED.route,
-                    Navigation.APP_SEARCH.route,
-                    Navigation.SETTINGS.route -> true
+                    Navigation.Featured.route,
+                    Navigation.AppSearch.route,
+                    Navigation.Settings.route -> true
                     else -> false
                 }
             } }
@@ -89,7 +91,7 @@ internal fun MainScreen() {
                 .padding(paddingValues)
             ,
             navController = navController,
-            startDestination = Navigation.FEATURED.route,
+            startDestination = Navigation.Featured.route,
             builder = NavGraphBuilder::mainNavigation
         )
     }
@@ -104,9 +106,9 @@ private fun BottomNavigationBar(
     modifier = modifier
 ) {
     val navItems = rememberSaveable { listOf(
-        "Featured" to Navigation.FEATURED,
-        "Search" to Navigation.APP_SEARCH,
-        "Settings" to Navigation.SETTINGS
+        "Featured" to Navigation.Featured,
+        "Search" to Navigation.AppSearch,
+        "Settings" to Navigation.Settings
     ) }
     navItems.forEach { item ->
         NavigationBarItem(
@@ -119,19 +121,36 @@ private fun BottomNavigationBar(
 }
 
 private fun NavGraphBuilder.mainNavigation() {
-    composable(route = Navigation.FEATURED.route) {
+
+    composable(route = Navigation.Featured.route) {
         {}
     }
-    composable(route = Navigation.APP_SEARCH.route) {
+
+    composable(route = Navigation.AppSearch.route) {
         AppSearchScreen()
     }
-    composable(route = Navigation.SETTINGS.route) {
+
+    composable(route = Navigation.Settings.route) {
         SettingsScreen()
     }
-    composable(route = Navigation.INTEGRATIONS.route) {
+
+    composable(route = Navigation.Integrations.route) {
         IntegrationsScreen()
     }
-    composable(route = Navigation.APP_DETAILS.route) {
+
+    composable(
+        route = Navigation.AppDetails.route,
+        arguments = listOf(
+            navArgument("source") { type = NavType.StringType },
+            navArgument("userId") { type = NavType.StringType },
+            navArgument("repoId") { type = NavType.StringType }
+        )
+    ) { backStackEntry ->
+        val source = backStackEntry.arguments?.getString("source") ?: ""
+        val userId = backStackEntry.arguments?.getString("userId") ?: ""
+        val repoId = backStackEntry.arguments?.getString("repoId") ?: ""
+
         AppDetailsScreen()
     }
+
 }

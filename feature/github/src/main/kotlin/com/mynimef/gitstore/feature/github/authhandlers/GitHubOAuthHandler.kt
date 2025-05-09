@@ -12,7 +12,7 @@ import java.util.Base64
 /**
  *
  */
-internal class GithubOauthHandler(
+internal class GitHubOAuthHandler(
     private val eventListener: EventListener
 ): IntegrationAuthHandler {
 

@@ -1,14 +1,24 @@
 package com.mynimef.gitstore.domain.models
 
-enum class Navigation(
-    val route: String,
-    val parentRoute: String? = null
-) {
+/**
+ *
+ */
+sealed class Navigation(val route: String) {
 
-    FEATURED(route = "featured"),
-    APP_SEARCH(route = "app_search"),
-    SETTINGS(route = "settings"),
-    INTEGRATIONS(route = "integrations"),
-    APP_DETAILS(route = "app_details")
+    object Featured: Navigation(route = "featured")
+
+    object AppSearch: Navigation(route = "app_search")
+
+    object Settings: Navigation(route = "settings")
+
+    object Integrations: Navigation(route = "integrations")
+
+    object AppDetails: Navigation(route = "app_details/{source}/{userId}/{repoId}") {
+        fun createRoute(
+            source: String,
+            userId: String,
+            repoId: String
+        ): String = "app_details/$source/$userId/$repoId"
+    }
 
 }
