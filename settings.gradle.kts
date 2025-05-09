@@ -28,3 +28,4 @@ include(":presentation")
 
 // features
 include(":feature:github")
+include(":feature:gitlab")

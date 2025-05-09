@@ -17,7 +17,7 @@ import dagger.multibindings.StringKey
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal class GithubModule {
+internal class GitHubModule {
 
     @Provides
     @IntoSet
