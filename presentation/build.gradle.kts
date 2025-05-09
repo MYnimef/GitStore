@@ -15,8 +15,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-
-        buildConfigField("String", "GITHUB_CLIENT_ID", "\"Ov23liFTfFUgn9uvTGax\"")
     }
 
     buildTypes {

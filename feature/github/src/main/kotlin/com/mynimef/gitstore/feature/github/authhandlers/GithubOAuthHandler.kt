@@ -4,11 +4,14 @@ import android.net.Uri
 import com.mynimef.gitstore.domain.EventListener
 import com.mynimef.gitstore.domain.IntegrationAuthHandler
 import com.mynimef.gitstore.domain.models.Event
+import com.mynimef.gitstore.feature.github.BuildConfig
 import java.security.MessageDigest
 import java.security.SecureRandom
 import java.util.Base64
 
-// Example of how it will look
+/**
+ *
+ */
 internal class GithubOauthHandler(
     private val eventListener: EventListener
 ): IntegrationAuthHandler {
@@ -23,7 +26,7 @@ internal class GithubOauthHandler(
             .appendPath("login")
             .appendPath("oauth")
             .appendPath("authorize")
-            .appendQueryParameter("client_id", "")
+            .appendQueryParameter("client_id", BuildConfig.GITHUB_CLIENT_ID)
             .appendQueryParameter("redirect_uri", "gitstore://integration/github")
             .appendQueryParameter("scope", "read:user")
             .appendQueryParameter("code_challenge", codeChallenge)
