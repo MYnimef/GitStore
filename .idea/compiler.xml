@@ -4,6 +4,9 @@
     <bytecodeTargetLevel>
       <module name="GitStore.data_remote.main" target="17" />
       <module name="GitStore.data_remote.test" target="17" />
+      <module name="GitStore.feature.feature-github.main" target="17" />
+      <module name="GitStore.feature.feature-github.test" target="17" />
+      <module name="GitStore.feature.github.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

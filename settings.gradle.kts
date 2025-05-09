@@ -25,3 +25,6 @@ include(":domain")
 include(":data-remote")
 include(":data-local")
 include(":presentation")
+
+// features
+include(":feature:github")
