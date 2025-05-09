@@ -11,6 +11,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import dagger.multibindings.ElementsIntoSet
+import dagger.multibindings.Multibinds
 import javax.inject.Singleton
 
 /**
@@ -44,20 +46,6 @@ internal class AppModule {
     @Provides
     fun provideNetwork(): AppNetwork {
         return AppNetworkImpl()
-    }
-
-    /**
-     * Provides a singleton instance of [com.mynimef.gitstore.domain.DeeplinkHandler] for managing deep link navigation.
-     *
-     * @param storage The [AppStorage] instance used by the deeplink handler
-     * @return A [com.mynimef.gitstore.domain.DeeplinkHandler] instance
-     */
-    @Singleton
-    @Provides
-    fun provideDeeplinkHandler(
-        storage: AppStorage
-    ): DeeplinkHandler {
-        return DeeplinkHandler(storage = storage)
     }
 
 }

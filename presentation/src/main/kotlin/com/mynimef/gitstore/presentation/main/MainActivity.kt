@@ -25,13 +25,15 @@ import javax.inject.Inject
 @AndroidEntryPoint
 internal class MainActivity : ComponentActivity() {
 
-    @Inject lateinit var deeplinkHandler: DeeplinkHandler
+    @Inject
+    @JvmSuppressWildcards
+    lateinit var deeplinkHandlersMap: Map<String, DeeplinkHandler>
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         intent.data?.let { uri ->
             lifecycleScope.launch {
-                deeplinkHandler.handleDeeplink(deeplink = uri.toDeeplink())
+                deeplinkHandlersMap["${uri.host}${uri.path}"]?.handleDeeplink(deeplink = uri.toDeeplink())
             }
         }
     }

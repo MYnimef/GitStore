@@ -1,4 +1,4 @@
-package com.mynimef.gitstore.feature.github.authhandlers
+package com.mynimef.gitstore.feature.github.auth
 
 import android.net.Uri
 import com.mynimef.gitstore.domain.EventListener
