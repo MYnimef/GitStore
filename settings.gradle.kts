@@ -24,8 +24,14 @@ include(":app")
 include(":domain")
 include(":data-remote")
 include(":data-local")
-include(":presentation")
+
+// core
+include(":core:navigation")
+
+// common
+include(":common:uikit")
 
 // features
+include(":feature:main")
 include(":feature:github")
 include(":feature:gitlab")
