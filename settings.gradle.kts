@@ -20,16 +20,17 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "GitStore"
+
 include(":app")
 include(":domain")
 include(":data-remote")
 include(":data-local")
 
 // core
+include(":core:deeplinks")
+include(":core:events")
 include(":core:navigation:api")
 include(":core:navigation:impl")
-
-include(":core:events")
 
 // common
 include(":common:uikit")
@@ -37,7 +38,5 @@ include(":common:uikit")
 // features
 include(":feature:main:api")
 include(":feature:main:impl")
-
 include(":feature:github")
 include(":feature:gitlab")
-include(":core:deeplinks")

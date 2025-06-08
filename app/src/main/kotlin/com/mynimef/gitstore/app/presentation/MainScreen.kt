@@ -43,7 +43,9 @@ internal fun MainScreen(
                 }
 
                 is Event.NavigateTo -> {
-                    navController.navigate(event.navigation.route) {
+                    navController.navigate(
+                        route = event.navigation.route
+                    ) {
                         launchSingleTop = true
                         restoreState = true
                     }
