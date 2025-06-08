@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="GitStore.core.events.lib.main" target="17" />
+      <module name="GitStore.core.events.lib.test" target="17" />
       <module name="GitStore.core.impl" target="21" />
       <module name="GitStore.data_remote.main" target="17" />
       <module name="GitStore.data_remote.test" target="17" />

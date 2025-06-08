@@ -1,15 +1,12 @@
 package com.mynimef.gitstore.feature.main.presentation.di
 
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOutVertically
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.mynimef.gitstore.core.navigation.impl.ComposeDestination
+import com.mynimef.gitstore.feature.main.api.IntegrationDestination
+import com.mynimef.gitstore.feature.main.api.MainDestination
 import com.mynimef.gitstore.feature.main.presentation.screens.integrations.IntegrationsScreen
 import com.mynimef.gitstore.feature.main.presentation.screens.main.MainScreen
-import com.mynimef.gitstore.core.navigation.impl.ComposeDestination
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,7 +20,7 @@ internal class ScreensModule {
     @Provides
     @IntoSet
     fun provideMainScreen() = object : ComposeDestination {
-        override val route = "main_screen"
+        override val route = MainDestination.ROUTE_KEY
 
         override fun register(builder: NavGraphBuilder) {
             builder.composable(route = route) {
@@ -35,7 +32,7 @@ internal class ScreensModule {
     @Provides
     @IntoSet
     fun provideIntegrationsScreen() = object : ComposeDestination {
-        override val route = "integrations"
+        override val route = IntegrationDestination.ROUTE_KEY
 
         override fun register(builder: NavGraphBuilder) {
             builder.composable(route = route) {

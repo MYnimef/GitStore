@@ -1,12 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.mynimef.gitstore.feature.github"
+    namespace = "com.mynimef.gitstore.events.impl"
     compileSdk = 35
 
     defaultConfig {
@@ -14,8 +14,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-
-        buildConfigField("String", "GITHUB_CLIENT_ID", "\"Ov23liFTfFUgn9uvTGax\"")
     }
 
     buildTypes {
@@ -34,25 +32,21 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
-        buildConfig = true
-    }
 }
 
 dependencies {
 
-    implementation(project(":domain"))
-
-    //core
-    implementation(project(":core:events:api"))
-
-    implementation(libs.androidx.core.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    api(project(":core:events:api"))
 
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
 }

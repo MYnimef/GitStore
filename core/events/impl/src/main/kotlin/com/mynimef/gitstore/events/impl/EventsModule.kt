@@ -1,6 +1,6 @@
-package com.mynimef.gitstore.app.presentation.di
+package com.mynimef.gitstore.events.impl
 
-import com.mynimef.gitstore.domain.EventListener
+import com.mynimef.gitstore.core.events.lib.EventListener
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -8,11 +8,11 @@ import dagger.hilt.components.SingletonComponent
 
 /**
  * Dagger Hilt module that provides presentation layer dependencies.
- * This module is installed in the [SingletonComponent] to ensure dependencies are scoped to the application lifecycle.
+ * This module is installed in the [dagger.hilt.components.SingletonComponent] to ensure dependencies are scoped to the application lifecycle.
  */
 @Module
 @InstallIn(SingletonComponent::class)
-internal abstract class PresentationModule {
+internal abstract class EventsModule {
 
     /**
      * Binds the [EventFlowAdapter] implementation to the [EventListener] interface.

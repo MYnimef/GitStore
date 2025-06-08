@@ -1,9 +1,9 @@
 package com.mynimef.gitstore.feature.github.deeplink
 
+import com.mynimef.gitstore.core.events.lib.Event
+import com.mynimef.gitstore.core.events.lib.EventListener
 import com.mynimef.gitstore.domain.DeeplinkHandler
-import com.mynimef.gitstore.domain.EventListener
 import com.mynimef.gitstore.domain.models.Deeplink
-import com.mynimef.gitstore.domain.models.Event
 
 /**
  *

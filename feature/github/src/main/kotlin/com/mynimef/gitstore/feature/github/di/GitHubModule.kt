@@ -1,7 +1,7 @@
 package com.mynimef.gitstore.feature.github.di
 
+import com.mynimef.gitstore.core.events.lib.EventListener
 import com.mynimef.gitstore.domain.DeeplinkHandler
-import com.mynimef.gitstore.domain.EventListener
 import com.mynimef.gitstore.domain.IntegrationAuthHandler
 import com.mynimef.gitstore.domain.models.Integration
 import com.mynimef.gitstore.feature.github.deeplink.GitHubDeeplinkHandler

@@ -1,7 +1,7 @@
-package com.mynimef.gitstore.app.presentation.di
+package com.mynimef.gitstore.events.impl
 
-import com.mynimef.gitstore.domain.EventListener
-import com.mynimef.gitstore.domain.models.Event
+import com.mynimef.gitstore.core.events.lib.Event
+import com.mynimef.gitstore.core.events.lib.EventListener
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import javax.inject.Inject
@@ -9,11 +9,11 @@ import javax.inject.Singleton
 
 /**
  * Adapter that converts domain events into Kotlin Flow streams.
- * This class implements the [EventListener] interface and provides a way to observe events
+ * This class implements the [com.mynimef.gitstore.core.events.lib.EventListener] interface and provides a way to observe events
  * using Kotlin Flow in the presentation layer.
  */
 @Singleton
-internal class EventFlowAdapter @Inject constructor() : EventListener {
+class EventFlowAdapter @Inject constructor() : EventListener {
 
     /**
      * Internal mutable shared flow that emits events.

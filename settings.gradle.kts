@@ -29,11 +29,15 @@ include(":data-local")
 include(":core:navigation:api")
 include(":core:navigation:impl")
 
+include(":core:events:api")
+include(":core:events:impl")
+
 // common
 include(":common:uikit")
 
 // features
-include(":feature:github")
-include(":feature:gitlab")
 include(":feature:main:api")
 include(":feature:main:impl")
+
+include(":feature:github")
+include(":feature:gitlab")

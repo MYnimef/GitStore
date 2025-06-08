@@ -17,12 +17,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.mynimef.gitstore.domain.models.Event
+import com.mynimef.gitstore.core.events.lib.Event
 import com.mynimef.gitstore.core.navigation.impl.ComposeDestination
+import com.mynimef.gitstore.feature.main.api.MainDestination
 
 @Composable
 internal fun MainScreen(
-    startDestination: String? = null,
     destinations: Collection<ComposeDestination>
 ) {
     val viewModel: MainViewModel = hiltViewModel()
@@ -60,7 +60,7 @@ internal fun MainScreen(
     NavHost(
         modifier = Modifier.fillMaxSize(),
         navController = navController,
-        startDestination = "main_screen" ?: INITIAL_ROUTE,
+        startDestination = MainDestination.ROUTE_KEY,
         builder = {
             destinations.forEach { destination ->
                 destination.register(builder = this)
