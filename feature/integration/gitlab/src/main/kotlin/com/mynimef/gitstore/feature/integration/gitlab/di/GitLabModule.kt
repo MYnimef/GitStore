@@ -1,4 +1,4 @@
-package com.mynimef.gitstore.feature.gitlab.di
+package com.mynimef.gitstore.feature.integration.gitlab.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

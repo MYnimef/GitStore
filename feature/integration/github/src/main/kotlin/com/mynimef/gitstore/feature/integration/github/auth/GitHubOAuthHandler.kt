@@ -1,10 +1,10 @@
-package com.mynimef.gitstore.feature.github.auth
+package com.mynimef.gitstore.feature.integration.github.auth
 
 import android.net.Uri
 import com.mynimef.gitstore.core.events.Event
 import com.mynimef.gitstore.core.events.EventListener
 import com.mynimef.gitstore.domain.IntegrationAuthHandler
-import com.mynimef.gitstore.feature.github.BuildConfig
+import com.mynimef.gitstore.feature.integration.github.BuildConfig
 import java.security.MessageDigest
 import java.security.SecureRandom
 import java.util.Base64

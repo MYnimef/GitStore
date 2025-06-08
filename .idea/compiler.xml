@@ -14,7 +14,10 @@
       <module name="GitStore.data_remote.test" target="17" />
       <module name="GitStore.feature.feature-github.main" target="17" />
       <module name="GitStore.feature.feature-github.test" target="17" />
+      <module name="GitStore.feature.github" target="21" />
+      <module name="GitStore.feature.github.main" target="17" />
       <module name="GitStore.feature.github.test" target="17" />
+      <module name="GitStore.feature.gitlab" target="21" />
       <module name="GitStore.presentation" target="21" />
     </bytecodeTargetLevel>
   </component>

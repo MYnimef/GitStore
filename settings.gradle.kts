@@ -38,5 +38,5 @@ include(":common:uikit")
 // features
 include(":feature:main:api")
 include(":feature:main:impl")
-include(":feature:github")
-include(":feature:gitlab")
+include(":feature:integration:github")
+include(":feature:integration:gitlab")

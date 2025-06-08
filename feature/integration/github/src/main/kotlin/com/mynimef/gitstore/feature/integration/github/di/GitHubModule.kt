@@ -1,12 +1,12 @@
-package com.mynimef.gitstore.feature.github.di
+package com.mynimef.gitstore.feature.integration.github.di
 
 import com.mynimef.gitstore.core.deeplinks.DeeplinkHandler
 import com.mynimef.gitstore.core.events.EventListener
 import com.mynimef.gitstore.domain.IntegrationAuthHandler
 import com.mynimef.gitstore.domain.models.Integration
-import com.mynimef.gitstore.feature.github.auth.GitHubOAuthHandler
-import com.mynimef.gitstore.feature.github.auth.GitHubPatHandler
-import com.mynimef.gitstore.feature.github.deeplink.GitHubDeeplinkHandler
+import com.mynimef.gitstore.feature.integration.github.auth.GitHubOAuthHandler
+import com.mynimef.gitstore.feature.integration.github.auth.GitHubPatHandler
+import com.mynimef.gitstore.feature.integration.github.deeplink.GitHubDeeplinkHandler
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

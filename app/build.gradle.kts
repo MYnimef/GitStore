@@ -58,8 +58,8 @@ dependencies {
 
     // feature
     implementation(project(":feature:main:impl"))
-    implementation(project(":feature:github"))
-    implementation(project(":feature:gitlab"))
+    implementation(project(":feature:integration:github"))
+    implementation(project(":feature:integration:gitlab"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

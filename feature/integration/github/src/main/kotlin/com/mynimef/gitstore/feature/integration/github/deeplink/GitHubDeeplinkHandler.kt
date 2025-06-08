@@ -1,4 +1,4 @@
-package com.mynimef.gitstore.feature.github.deeplink
+package com.mynimef.gitstore.feature.integration.github.deeplink
 
 import com.mynimef.gitstore.core.deeplinks.Deeplink
 import com.mynimef.gitstore.core.deeplinks.DeeplinkHandler

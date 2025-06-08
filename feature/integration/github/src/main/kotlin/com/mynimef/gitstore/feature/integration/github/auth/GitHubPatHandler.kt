@@ -1,4 +1,4 @@
-package com.mynimef.gitstore.feature.github.auth
+package com.mynimef.gitstore.feature.integration.github.auth
 
 import com.mynimef.gitstore.domain.IntegrationAuthHandler
 

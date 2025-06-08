@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mynimef.gitstore.feature.github"
+    namespace = "com.mynimef.gitstore.feature.integration.github"
     compileSdk = 35
 
     defaultConfig {
