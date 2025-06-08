@@ -9,7 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import com.mynimef.gitstore.common.uikit.theme.GitStoreTheme
 import com.mynimef.gitstore.domain.DeeplinkHandler
 import com.mynimef.gitstore.feature.main.presentation.utils.toDeeplink
-import com.mynimef.gitstore.core.navigation.ComposeDestination
+import com.mynimef.gitstore.core.navigation.impl.ComposeDestination
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject

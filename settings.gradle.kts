@@ -26,12 +26,14 @@ include(":data-remote")
 include(":data-local")
 
 // core
-include(":core:navigation")
+include(":core:navigation:api")
+include(":core:navigation:impl")
 
 // common
 include(":common:uikit")
 
 // features
-include(":feature:main")
 include(":feature:github")
 include(":feature:gitlab")
+include(":feature:main:api")
+include(":feature:main:impl")

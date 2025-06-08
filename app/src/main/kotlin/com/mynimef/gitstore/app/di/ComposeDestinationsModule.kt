@@ -1,6 +1,6 @@
 package com.mynimef.gitstore.app.di
 
-import com.mynimef.gitstore.core.navigation.ComposeDestination
+import com.mynimef.gitstore.core.navigation.impl.ComposeDestination
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
