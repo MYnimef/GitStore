@@ -45,7 +45,8 @@ dependencies {
     implementation(project(":domain"))
 
     // core
-    implementation(project(":core:events:api"))
+    implementation(project(":core:deeplinks"))
+    implementation(project(":core:events"))
     implementation(project(":core:navigation:impl"))
 
     // common

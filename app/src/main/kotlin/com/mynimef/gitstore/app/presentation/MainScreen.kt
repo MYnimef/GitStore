@@ -17,7 +17,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.mynimef.gitstore.core.events.lib.Event
+import com.mynimef.gitstore.core.events.Event
 import com.mynimef.gitstore.core.navigation.impl.ComposeDestination
 import com.mynimef.gitstore.feature.main.api.MainDestination
 

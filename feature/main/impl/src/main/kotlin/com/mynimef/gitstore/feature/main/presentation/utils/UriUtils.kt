@@ -1,7 +1,7 @@
 package com.mynimef.gitstore.feature.main.presentation.utils
 
 import android.net.Uri
-import com.mynimef.gitstore.domain.models.Deeplink
+import com.mynimef.gitstore.core.deeplinks.Deeplink
 
 /**
  * Converts an [Uri] into a [Deeplink] data object.

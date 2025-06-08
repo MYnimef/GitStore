@@ -2,8 +2,8 @@ package com.mynimef.gitstore.feature.main.presentation.screens.appsettings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mynimef.gitstore.core.events.lib.Event
-import com.mynimef.gitstore.core.events.lib.EventListener
+import com.mynimef.gitstore.core.events.Event
+import com.mynimef.gitstore.core.events.EventListener
 import com.mynimef.gitstore.feature.main.api.IntegrationDestination
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

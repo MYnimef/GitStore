@@ -49,7 +49,8 @@ dependencies {
     implementation(project(":data-local"))
 
     // core
-    implementation(project(":core:events:impl"))
+    implementation(project(":core:deeplinks"))
+    implementation(project(":core:events"))
     implementation(project(":core:navigation:impl"))
 
     // common

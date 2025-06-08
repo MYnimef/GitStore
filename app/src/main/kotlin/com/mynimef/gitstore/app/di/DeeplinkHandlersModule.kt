@@ -1,6 +1,6 @@
 package com.mynimef.gitstore.app.di
 
-import com.mynimef.gitstore.domain.DeeplinkHandler
+import com.mynimef.gitstore.core.deeplinks.DeeplinkHandler
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

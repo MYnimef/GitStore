@@ -29,8 +29,7 @@ include(":data-local")
 include(":core:navigation:api")
 include(":core:navigation:impl")
 
-include(":core:events:api")
-include(":core:events:impl")
+include(":core:events")
 
 // common
 include(":common:uikit")
@@ -41,3 +40,4 @@ include(":feature:main:impl")
 
 include(":feature:github")
 include(":feature:gitlab")
+include(":core:deeplinks")

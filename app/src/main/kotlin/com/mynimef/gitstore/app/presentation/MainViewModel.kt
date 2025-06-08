@@ -1,7 +1,7 @@
 package com.mynimef.gitstore.app.presentation
 
 import androidx.lifecycle.ViewModel
-import com.mynimef.gitstore.events.impl.EventFlowAdapter
+import com.mynimef.gitstore.app.EventFlowAdapter
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
