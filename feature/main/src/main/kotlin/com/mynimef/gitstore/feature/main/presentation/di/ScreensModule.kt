@@ -4,7 +4,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.mynimef.gitstore.feature.main.presentation.screens.integrations.IntegrationsScreen
 import com.mynimef.gitstore.feature.main.presentation.screens.main.MainScreen
-import com.mynimef.navigation.ComposeDestination
+import com.mynimef.gitstore.core.navigation.ComposeDestination
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

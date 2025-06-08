@@ -18,7 +18,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.mynimef.gitstore.domain.models.Event
-import com.mynimef.navigation.ComposeDestination
+import com.mynimef.gitstore.core.navigation.ComposeDestination
 
 @Composable
 internal fun MainScreen(
